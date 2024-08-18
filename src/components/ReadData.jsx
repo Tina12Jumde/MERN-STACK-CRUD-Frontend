@@ -197,7 +197,6 @@
 
 // export default ReadData;
 
-
 // import axios from "axios";
 // import React, { useEffect, useState } from "react";
 // import  {deleteData}  from "./DeleteData.js";
@@ -458,10 +457,9 @@
 // };
 // export default ReadData;
 
-
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import  {deleteData}  from "./DeleteData.js";
+import { deleteData } from "./DeleteData.js";
 
 const ReadData = (props) => {
   let [FetchedData, SetFetchedData] = useState(null);
@@ -572,16 +570,13 @@ const ReadData = (props) => {
 
   return (
     <>
-      <div
-        style={{ maxHeight: "300px", maxWidth: "1200px" }}
-        className="container  overflow-scroll "
-      >
+      <div style={{maxHeight:"300px",maxWidth:"1200px"}} className="container overflow-scroll"  >
         {FetchedData ? (
           <table
-            style={{ maxHeight: "200px" }}
+            style={{ maxHeight: "200px" , overflow:"scroll" }}
             className="table table-border  "
           >
-            <thead className="">
+            <thead className="position-sticky top-0">
               <tr className="table-dark">
                 <th>name</th>
                 <th>phone</th>

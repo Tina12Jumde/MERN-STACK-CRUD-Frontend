@@ -502,6 +502,13 @@ const CreateData = (props) => {
 
   let handelChange = (e) => {
     let { name, value } = e.target;
+    let newFormData = { ...formData , [name]: value };
+      
+              if (name === 'dob') {
+                  newFormData.age = calculateAge(value);
+              }
+
+   
 
     setFormData((prev) => {
       return { ...prev, [name]: value };
